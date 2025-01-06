@@ -5,10 +5,10 @@ cd /usr/share/javascript/proxmox-widget-toolkit/ || { echo "Failed to change dir
 cp proxmoxlib.js proxmoxlib.js.bak
 
 # Find the lines to be commented and modify the file
-sed -i '/res === null.*res === undefined.*res/{ 
-  s/^/\/\// 
-  n 
-  s/^/\/\// 
+sed -i '/res === null.*res === undefined.*res/ {
+  s/^/\/\//
+  n
+  s/^/\/\//
   a\
-if(false) { 
+if(false) {
 }' proxmoxlib.js
